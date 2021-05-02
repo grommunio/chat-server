@@ -46,6 +46,7 @@ const (
 
 	DEFAULT_LOCALE          = "en"
 	USER_AUTH_SERVICE_EMAIL = "email"
+	USER_AUTH_SERVICE_PAM   = "pam"
 
 	USER_EMAIL_MAX_LENGTH     = 128
 	USER_NICKNAME_MAX_RUNES   = 64
