@@ -265,7 +265,7 @@ func (a *App) authenticateUser(c *request.Context, user *model.User, password, m
 		return ldapUser, nil
 	}
 
-	if user.AuthService != "" {
+	if user.AuthService != "" && user.AuthService != model.UserAuthServicePam {
 		authService := user.AuthService
 		if authService == model.UserAuthServiceSaml {
 			authService = strings.ToUpper(authService)
