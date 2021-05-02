@@ -10,6 +10,7 @@ import (
 	"github.com/mattermost/mattermost-server/v5/model"
 	"github.com/mattermost/mattermost-server/v5/services/mfa"
 	"github.com/mattermost/mattermost-server/v5/utils"
+	"github.com/msteinert/pam"
 )
 
 type TokenLocation int
@@ -115,8 +116,41 @@ func (a *App) DoubleCheckPassword(user *model.User, password string) *model.AppE
 	return nil
 }
 
+//func (a *App) checkUserPasswordPAM(user *model.User, password string) *model.AppError {
+func (a *App) checkUserPasswordPAM(user *model.User, password string) bool {
+	//TODO:get pam service name from config
+	pamServiceName := "grammmchat"
+	PAMServiceName := &pamServiceName
+	tx, err := pam.StartFunc(*PAMServiceName, user.Username, func(s pam.Style, msg string) (string, error) {
+		return password, nil
+	})
+	if err != nil {
+		// TODO: error msg
+		return false
+	}
+	err = tx.Authenticate(0)
+	if err != nil {
+		// TODO: error msg
+		return false
+	}
+	err = tx.AcctMgmt(pam.Silent)
+	if err != nil {
+		// TODO: error msg
+		return false
+	}
+	// TODO: ???
+	//runtime.GC()
+	return true
+}
+
 func (a *App) checkUserPassword(user *model.User, password string) *model.AppError {
-	if !model.ComparePassword(user.Password, password) {
+	ret := false
+	if user.AuthService == model.USER_AUTH_SERVICE_PAM {
+		ret = a.checkUserPasswordPAM(user, password)
+	} else {
+		ret = model.ComparePassword(user.Password, password)
+	}
+	if !ret {
 		return model.NewAppError("checkUserPassword", "api.user.check_user_password.invalid.app_error", nil, "user_id="+user.Id, http.StatusUnauthorized)
 	}
 
@@ -243,7 +277,7 @@ func (a *App) authenticateUser(user *model.User, password, mfaToken string) (*mo
 		return ldapUser, nil
 	}
 
-	if user.AuthService != "" {
+	if user.AuthService != "" && user.AuthService != model.USER_AUTH_SERVICE_PAM {
 		authService := user.AuthService
 		if authService == model.USER_AUTH_SERVICE_SAML {
 			authService = strings.ToUpper(authService)
