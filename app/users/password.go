@@ -9,14 +9,47 @@ import (
 
 	"github.com/mattermost/mattermost-server/v6/model"
 	"golang.org/x/crypto/bcrypt"
+	"github.com/msteinert/pam"
 )
 
 func CheckUserPassword(user *model.User, password string) error {
-	if err := ComparePassword(user.Password, password); err != nil {
-		return NewErrInvalidPassword("")
+	if user.AuthService == model.UserAuthServicePam {
+		ret := CheckUserPasswordPAM(user, password)
+		if !ret {
+			return NewErrInvalidPassword("")
+		}
+	} else {
+		if err := ComparePassword(user.Password, password); err != nil {
+			return NewErrInvalidPassword("")
+		}
 	}
-
 	return nil
+}
+
+func CheckUserPasswordPAM(user *model.User, password string) bool {
+	//TODO:get pam service name from config
+	pamServiceName := "grommuniochat"
+	PAMServiceName := &pamServiceName
+	tx, err := pam.StartFunc(*PAMServiceName, user.Email, func(s pam.Style, msg string) (string, error) {
+		return password, nil
+	})
+	if err != nil {
+		// TODO: error msg
+		return false
+	}
+	err = tx.Authenticate(0)
+	if err != nil {
+		// TODO: error msg
+		return false
+	}
+	err = tx.AcctMgmt(pam.Silent)
+	if err != nil {
+		// TODO: error msg
+		return false
+	}
+	// TODO: ???
+	//runtime.GC()
+	return true
 }
 
 // HashPassword generates a hash using the bcrypt.GenerateFromPassword
