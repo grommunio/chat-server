@@ -121,7 +121,7 @@ func (a *App) checkUserPasswordPAM(user *model.User, password string) bool {
 	//TODO:get pam service name from config
 	pamServiceName := "grammmchat"
 	PAMServiceName := &pamServiceName
-	tx, err := pam.StartFunc(*PAMServiceName, user.Username, func(s pam.Style, msg string) (string, error) {
+	tx, err := pam.StartFunc(*PAMServiceName, user.Email, func(s pam.Style, msg string) (string, error) {
 		return password, nil
 	})
 	if err != nil {
