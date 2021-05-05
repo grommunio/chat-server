@@ -1120,7 +1120,7 @@ type SqlSettings struct {
 
 func (s *SqlSettings) SetDefaults(isUpdate bool) {
 	if s.DriverName == nil {
-		s.DriverName = NewString(DATABASE_DRIVER_POSTGRES)
+		s.DriverName = NewString(DATABASE_DRIVER_MYSQL)
 	}
 
 	if s.DataSource == nil {
