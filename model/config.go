@@ -1096,7 +1096,7 @@ type SqlSettings struct {
 
 func (s *SqlSettings) SetDefaults(isUpdate bool) {
 	if s.DriverName == nil {
-		s.DriverName = NewString(DatabaseDriverPostgres)
+		s.DriverName = NewString(DatabaseDriverMysql)
 	}
 
 	if s.DataSource == nil {
