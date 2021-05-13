@@ -107,7 +107,7 @@ const (
 	ServiceSettingsDefaultGfycatAPIKey     = "2_KtH_W5"
 	ServiceSettingsDefaultGfycatAPISecret  = "3wLVZPiswc3DnaiaFoLkDvB4X0IV6CpMkj4tf2inJRsBY6-FnkT08zGmppWFgeof"
 
-	TeamSettingsDefaultSiteName              = "Mattermost"
+	TeamSettingsDefaultSiteName              = "grommunio chat"
 	TeamSettingsDefaultMaxUsersPerTeam       = 50
 	TeamSettingsDefaultCustomBrandText       = ""
 	TeamSettingsDefaultCustomDescriptionText = ""
