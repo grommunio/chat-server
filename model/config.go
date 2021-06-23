@@ -129,12 +129,12 @@ const (
 
 	EMAIL_SETTINGS_DEFAULT_FEEDBACK_ORGANIZATION = ""
 
-	SUPPORT_SETTINGS_DEFAULT_TERMS_OF_SERVICE_LINK = "https://mattermost.com/terms-of-service/"
-	SUPPORT_SETTINGS_DEFAULT_PRIVACY_POLICY_LINK   = "https://mattermost.com/privacy-policy/"
-	SUPPORT_SETTINGS_DEFAULT_ABOUT_LINK            = "https://about.mattermost.com/default-about/"
-	SUPPORT_SETTINGS_DEFAULT_HELP_LINK             = "https://about.mattermost.com/default-help/"
-	SUPPORT_SETTINGS_DEFAULT_REPORT_A_PROBLEM_LINK = "https://about.mattermost.com/default-report-a-problem/"
-	SUPPORT_SETTINGS_DEFAULT_SUPPORT_EMAIL         = ""
+	SUPPORT_SETTINGS_DEFAULT_TERMS_OF_SERVICE_LINK = "https://docs.grammm.com/chat/"
+	SUPPORT_SETTINGS_DEFAULT_PRIVACY_POLICY_LINK   = "https://docs.grammm.com/chat/"
+	SUPPORT_SETTINGS_DEFAULT_ABOUT_LINK            = "https://docs.grammm.com/chat/"
+	SUPPORT_SETTINGS_DEFAULT_HELP_LINK             = "https://docs.grammm.com/chat/"
+	SUPPORT_SETTINGS_DEFAULT_REPORT_A_PROBLEM_LINK = "https://docs.grammm.com/chat/"
+	SUPPORT_SETTINGS_DEFAULT_SUPPORT_EMAIL         = "feedback@grammm.com"
 	SUPPORT_SETTINGS_DEFAULT_RE_ACCEPTANCE_PERIOD  = 365
 
 	LDAP_SETTINGS_DEFAULT_FIRST_NAME_ATTRIBUTE         = ""
@@ -169,9 +169,9 @@ const (
 	SAML_SETTINGS_CANONICAL_ALGORITHM_C14N11  = "Canonical1.1"
 	SAML_SETTINGS_DEFAULT_CANONICAL_ALGORITHM = SAML_SETTINGS_CANONICAL_ALGORITHM_C14N
 
-	NATIVEAPP_SETTINGS_DEFAULT_APP_DOWNLOAD_LINK         = "https://mattermost.com/download/#mattermostApps"
-	NATIVEAPP_SETTINGS_DEFAULT_ANDROID_APP_DOWNLOAD_LINK = "https://about.mattermost.com/mattermost-android-app/"
-	NATIVEAPP_SETTINGS_DEFAULT_IOS_APP_DOWNLOAD_LINK     = "https://about.mattermost.com/mattermost-ios-app/"
+	NATIVEAPP_SETTINGS_DEFAULT_APP_DOWNLOAD_LINK         = "https://docs.grammm.com/chat/"
+	NATIVEAPP_SETTINGS_DEFAULT_ANDROID_APP_DOWNLOAD_LINK = "https://docs.grammm.com/chat/"
+	NATIVEAPP_SETTINGS_DEFAULT_IOS_APP_DOWNLOAD_LINK     = "https://docs.grammm.com/chat/"
 
 	EXPERIMENTAL_SETTINGS_DEFAULT_LINK_METADATA_TIMEOUT_MILLISECONDS = 5000
 
