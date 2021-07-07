@@ -429,7 +429,7 @@
   },
   {
     "id": "api.command_channel_header.update_channel.app_error",
-    "translation": "Fehler beim Aktualisieren des aktuellen Kanals."
+    "translation": "Fehler beim Aktualisieren der Kanalüberschrift."
   },
   {
     "id": "api.command_channel_purpose.channel.app_error",
@@ -461,7 +461,7 @@
   },
   {
     "id": "api.command_channel_purpose.update_channel.app_error",
-    "translation": "Fehler beim Aktualisieren des aktuellen Kanals."
+    "translation": "Fehler beim Aktualisieren des Kanalzwecks."
   },
   {
     "id": "api.command_channel_remove.channel.app_error",
@@ -6961,7 +6961,7 @@
   },
   {
     "id": "model.plugin_command_crash.error.app_error",
-    "translation": "Das /{{.Command}} Kommando hat das {{.PluginId}} Plugin zum Absturz gebracht. Bitte Kontaktieren Sie Ihren Systemadministrator"
+    "translation": "Das /{{.Command}} Kommando hat das {{.PluginId}} Plugin zum Absturz gebracht. Bitte Kontaktieren Sie Ihren Systemadministrator."
   },
   {
     "id": "model.command.is_valid.plugin_id.app_error",
@@ -6993,7 +6993,7 @@
   },
   {
     "id": "ent.elasticsearch.search_files.disabled",
-    "translation": "Die Suche nach Dateien mit Elasticsearch ist auf diesem Server deaktiviert"
+    "translation": "Die Suche nach Dateien mit Elasticsearch ist auf diesem Server deaktiviert."
   },
   {
     "id": "ent.elasticsearch.post.get_files_batch_for_indexing.error",
