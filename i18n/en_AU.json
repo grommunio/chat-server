@@ -9211,6 +9211,13 @@
     "translation": "Data retention job failed."
   },
   {
+<<<<<<< HEAD
+=======
+    "id": "api.user.send_license_up_for_renewal_email.error",
+    "translation": "Failed to send licence up for renewal email"
+  },
+  {
+>>>>>>> Translations update from Weblate (#17903)
     "id": "api.templates.license_up_for_renewal_title",
     "translation": "Your Mattermost subscription is up for renewal"
   },

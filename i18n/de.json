@@ -5857,7 +5857,7 @@
   },
   {
     "id": "api.command.execute_command.format.app_error",
-    "translation": "Dem Kommandowort fehlt der führende Slash"
+    "translation": "Dem Kommandowort fehlt der führende Slash."
   },
   {
     "id": "api.channel.update_team_member_roles.changing_guest_role.app_error",
