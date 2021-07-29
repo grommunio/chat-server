@@ -5741,11 +5741,7 @@
   },
   {
     "id": "api.templates.mfa_deactivated_body.info",
-<<<<<<< HEAD
     "translation": "A többtényezős hitelesítést eltávolítottuk fiókjából a {{.SiteURL}} rendszerben."
-=======
-    "translation": "A többtényezős hitelesítést eltávolítottuk fiókjából a(z) {{.SiteURL}} webhelyen."
->>>>>>> Translations update from Weblate (#17903)
   },
   {
     "id": "api.templates.mfa_change_subject",
@@ -5757,11 +5753,7 @@
   },
   {
     "id": "api.templates.mfa_activated_body.info",
-<<<<<<< HEAD
     "translation": "A többtényezős hitelesítést hozzáadtuk fiókjához a {{.SiteURL}} rendszeren."
-=======
-    "translation": "A többtényezős hitelesítést hozzáadtuk fiókjához a(z) {{.SiteURL}} oldalon."
->>>>>>> Translations update from Weblate (#17903)
   },
   {
     "id": "api.templates.invite_subject",
@@ -9223,17 +9215,8 @@
     "translation": "{{.UserName}}, az előfizetésed le fog járni {{.Days}} nap múlva. Reméljük, hogy sikeresen megismerted a rugalmas, biztonságos csoportmunkát, amit a Mattermost biztosít. Újítsd meg mihamarabb az előfizetésed, hogy a csapatod tovább élvezhesse eme szolgáltatások nyújtotta előnyöket."
   },
   {
-<<<<<<< HEAD
     "id": "api.server.license_up_for_renewal.error_sending_email",
     "translation": "Hiba történt a licenc megújító e-mailek küldése közben"
-=======
-    "id": "api.user.send_license_up_for_renewal_email.error",
-    "translation": "Hiba történt a licensz megújító e-mail küldése közben"
-  },
-  {
-    "id": "api.server.license_up_for_renewal.error_sending_email",
-    "translation": "Hiba történt a licensz megújító e-mailek küldése közben"
->>>>>>> Translations update from Weblate (#17903)
   },
   {
     "id": "api.templates.license_up_for_renewal_title",
@@ -9245,11 +9228,7 @@
   },
   {
     "id": "api.templates.license_up_for_renewal_subject",
-<<<<<<< HEAD
     "translation": "A licence megújításra szorul"
-=======
-    "translation": "A licensze megújításra szorul"
->>>>>>> Translations update from Weblate (#17903)
   },
   {
     "id": "api.templates.license_up_for_renewal_renew_now",

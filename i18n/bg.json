@@ -9211,13 +9211,10 @@
     "translation": "Задачата по запазване на данни е неуспешна."
   },
   {
-<<<<<<< HEAD
-=======
     "id": "api.user.send_license_up_for_renewal_email.error",
     "translation": "Неуспешно изпращане на ел.поща за подновяване на лиценза"
   },
   {
->>>>>>> Translations update from Weblate (#17903)
     "id": "api.templates.license_up_for_renewal_title",
     "translation": "Вашият абонамент за Mattermost подлежи на подновяване"
   },

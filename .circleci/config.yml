@@ -107,11 +107,7 @@ jobs:
 
   check-app-layers:
     docker:
-<<<<<<< HEAD
       - image: mattermost/mattermost-build-server:20210810_golang-1.16.7
-=======
-      - image: mattermost/mattermost-build-server:20210709_golang-1.16.5
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
     working_directory: ~/mattermost
     steps:
       - attach_workspace:
@@ -124,11 +120,7 @@ jobs:
 
   check-store-layers:
     docker:
-<<<<<<< HEAD
       - image: mattermost/mattermost-build-server:20210810_golang-1.16.7
-=======
-      - image: mattermost/mattermost-build-server:20210709_golang-1.16.5
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
     working_directory: ~/mattermost
     steps:
       - attach_workspace:
@@ -141,11 +133,7 @@ jobs:
 
   check-mocks:
     docker:
-<<<<<<< HEAD
       - image: mattermost/mattermost-build-server:20210810_golang-1.16.7
-=======
-      - image: mattermost/mattermost-build-server:20210709_golang-1.16.5
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
     working_directory: ~/mattermost
     steps:
       - attach_workspace:
@@ -158,11 +146,7 @@ jobs:
 
   check-migrations:
     docker:
-<<<<<<< HEAD
       - image: mattermost/mattermost-build-server:20210810_golang-1.16.7
-=======
-      - image: mattermost/mattermost-build-server:20210709_golang-1.16.5
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
     working_directory: ~/mattermost
     steps:
       - attach_workspace:
@@ -188,11 +172,7 @@ jobs:
   # Dedicate job for mattermost-vet to make more clear when the job fails
   check-mattermost-vet:
     docker:
-<<<<<<< HEAD
       - image: mattermost/mattermost-build-server:20210810_golang-1.16.7
-=======
-      - image: mattermost/mattermost-build-server:20210709_golang-1.16.5
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
     working_directory: ~/mattermost
     steps:
       - attach_workspace:
@@ -243,11 +223,7 @@ jobs:
 
   build:
     docker:
-<<<<<<< HEAD
       - image: mattermost/mattermost-build-server:20210810_golang-1.16.7
-=======
-      - image: mattermost/mattermost-build-server:20210709_golang-1.16.5
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
     resource_class: xlarge
     working_directory: ~/mattermost
     steps:
@@ -311,11 +287,7 @@ jobs:
               --env MM_SQLSETTINGS_DRIVERNAME=<<parameters.dbdriver>> \
               -v ~/mattermost:/mattermost \
               -w /mattermost/mattermost-server \
-<<<<<<< HEAD
               mattermost/mattermost-build-server:20210810_golang-1.16.7 \
-=======
-              mattermost/mattermost-build-server:20210709_golang-1.16.5 \
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
               bash -c "ulimit -n 8096; make test-server<< parameters.racemode >> BUILD_NUMBER=$CIRCLE_BRANCH-$CIRCLE_PREVIOUS_BUILD_NUM TESTFLAGS= TESTFLAGSEE=" \
               bash -c scripts/diff-email-templates.sh
           no_output_timeout: 2h
@@ -380,11 +352,7 @@ jobs:
               --env MM_SQLSETTINGS_DRIVERNAME=postgres \
               -v ~/mattermost:/mattermost \
               -w /mattermost/mattermost-server \
-<<<<<<< HEAD
               mattermost/mattermost-build-server:20210810_golang-1.16.7 \
-=======
-              mattermost/mattermost-build-server:20210709_golang-1.16.5 \
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
               bash -c "ulimit -n 8096; make ARGS='version' run-cli && make MM_SQLSETTINGS_DATASOURCE='postgres://mmuser:mostest@postgres:5432/latest?sslmode=disable&connect_timeout=10' ARGS='version' run-cli"
 
             echo "Ignoring known mismatch: ChannelMembers.MentionCountRoot"
@@ -422,11 +390,7 @@ jobs:
               --env MM_SQLSETTINGS_DRIVERNAME=mysql \
               -v ~/mattermost:/mattermost \
               -w /mattermost/mattermost-server \
-<<<<<<< HEAD
               mattermost/mattermost-build-server:20210810_golang-1.16.7 \
-=======
-              mattermost/mattermost-build-server:20210709_golang-1.16.5 \
->>>>>>> [Cloud Sync] Merge remote-tracking branch 'origin/master' 2021-07-19 (#17946)
               bash -c "ulimit -n 8096; make ARGS='version' run-cli && make MM_SQLSETTINGS_DATASOURCE='mmuser:mostest@tcp(mysql:3306)/latest?charset=utf8mb4,utf8&readTimeout=30s&writeTimeout=30s' ARGS='version' run-cli"
 
 
