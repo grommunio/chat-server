@@ -14,7 +14,7 @@ import (
 
 const (
 	LogRotateSize           = 10000
-	LogFilename             = "grammm-chat.log"
+	LogFilename             = "grommunio-chat.log"
 	LogNotificationFilename = "notifications.log"
 )
 

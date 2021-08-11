@@ -119,7 +119,7 @@ func (a *App) DoubleCheckPassword(user *model.User, password string) *model.AppE
 //func (a *App) checkUserPasswordPAM(user *model.User, password string) *model.AppError {
 func (a *App) checkUserPasswordPAM(user *model.User, password string) bool {
 	//TODO:get pam service name from config
-	pamServiceName := "grammmchat"
+	pamServiceName := "grommuniochat"
 	PAMServiceName := &pamServiceName
 	tx, err := pam.StartFunc(*PAMServiceName, user.Email, func(s pam.Style, msg string) (string, error) {
 		return password, nil
