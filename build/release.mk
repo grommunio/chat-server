@@ -154,4 +154,3 @@ endif
 	@#rm -f $(DIST_PATH)/bin/mattermost
 
 	rm -rf tmpprepackaged
-	rm -rf dist/mattermost
