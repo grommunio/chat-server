@@ -239,7 +239,7 @@ const (
 	CloudSettingsDefaultCwsAPIURL = "https://portal.internal.prod.cloud.mattermost.com"
 	OpenidSettingsDefaultScope    = "profile openid email"
 
-	LocalModeSocketPath = "/var/tmp/mattermost_local.socket"
+	LocalModeSocketPath = "/var/tmp/grommunio-chat_local.socket"
 )
 
 func GetDefaultAppCustomURLSchemes() []string {
@@ -754,7 +754,7 @@ func (s *ServiceSettings) SetDefaults(isUpdate bool) {
 	}
 
 	if s.EnableLocalMode == nil {
-		s.EnableLocalMode = NewBool(false)
+		s.EnableLocalMode = NewBool(true)
 	}
 
 	if s.LocalModeSocketLocation == nil {
