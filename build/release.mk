@@ -155,7 +155,7 @@ else
 	cp $(GOBIN)/linux_amd64/mattermost $(DIST_PATH)/bin # from cross-compiled bin dir
 endif
 	#Download MMCTL for $(MMCTL_PLATFORM)
-	scripts/download_mmctl_release.sh "Linux" $(DIST_PATH)/bin
+	scripts/download_mmctl_release.sh "Linux-x86_64" $(DIST_PATH)/bin
 	@# Prepackage plugins
 	@for plugin_package in $(PLUGIN_PACKAGES) ; do \
 		ARCH="linux-amd64"; \
