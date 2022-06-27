@@ -294,9 +294,9 @@
         "LoginButtonTextColor": ""
     },
     "NativeAppSettings": {
-        "AppDownloadLink": "https://mattermost.com/download/",
-        "AndroidAppDownloadLink": "https://mattermost.com/mattermost-android-app/",
-        "IosAppDownloadLink": "https://mattermost.com/mattermost-ios-app/"
+        "AppDownloadLink": "https://grommunio.com/download/",
+        "AndroidAppDownloadLink": "https://play.google.com/store/apps/details?id=com.grommunio.chat&hl=de&gl=US",
+        "IosAppDownloadLink": "https://apps.apple.com/at/app/grommunio-chat/id1582191990?l=en"
     },
     "ClusterSettings": {
         "Enable": false,
