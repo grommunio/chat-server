@@ -130,12 +130,12 @@ const (
 
 	EmailSettingsDefaultFeedbackOrganization = ""
 
-	SupportSettingsDefaultTermsOfServiceLink = "https://mattermost.com/terms-of-use/"
-	SupportSettingsDefaultPrivacyPolicyLink  = "https://mattermost.com/privacy-policy/"
-	SupportSettingsDefaultAboutLink          = "https://docs.mattermost.com/about/product.html/"
-	SupportSettingsDefaultHelpLink           = "https://mattermost.com/default-help/"
-	SupportSettingsDefaultReportAProblemLink = "https://mattermost.com/default-report-a-problem/"
-	SupportSettingsDefaultSupportEmail       = ""
+	SupportSettingsDefaultTermsOfServiceLink = "https://grommunio.com/wp-content/uploads/2021/09/AGB_grommunio_EN_01OCT21.pdf"
+	SupportSettingsDefaultPrivacyPolicyLink  = "https://grommunio.com/privacy/"
+	SupportSettingsDefaultAboutLink          = "https://docs.grommunio.com/user/chat.html"
+	SupportSettingsDefaultHelpLink           = "https://docs.grommunio.com/user/chat.html"
+	SupportSettingsDefaultReportAProblemLink = "https://docs.grommunio.com/user/chat.html"
+	SupportSettingsDefaultSupportEmail       = "feedback@grommunio.com"
 	SupportSettingsDefaultReAcceptancePeriod = 365
 
 	LdapSettingsDefaultFirstNameAttribute        = ""
@@ -170,9 +170,9 @@ const (
 	SamlSettingsCanonicalAlgorithmC14n11  = "Canonical1.1"
 	SamlSettingsDefaultCanonicalAlgorithm = SamlSettingsCanonicalAlgorithmC14n
 
-	NativeappSettingsDefaultAppDownloadLink        = "https://mattermost.com/download/#mattermostApps"
-	NativeappSettingsDefaultAndroidAppDownloadLink = "https://mattermost.com/mattermost-android-app/"
-	NativeappSettingsDefaultIosAppDownloadLink     = "https://mattermost.com/mattermost-ios-app/"
+	NativeappSettingsDefaultAppDownloadLink        = "https://play.google.com/store/apps/details?id=com.grommunio.chat&hl=de&gl=US"
+	NativeappSettingsDefaultAndroidAppDownloadLink = "https://play.google.com/store/apps/details?id=com.grommunio.chat&hl=de&gl=US"
+	NativeappSettingsDefaultIosAppDownloadLink     = "https://apps.apple.com/at/app/grommunio-chat/id1582191990?l=en"
 
 	ExperimentalSettingsDefaultLinkMetadataTimeoutMilliseconds = 5000
 
