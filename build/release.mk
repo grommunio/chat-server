@@ -262,4 +262,3 @@ endif
 
 package: package-osx package-linux package-windows
 	rm -rf tmpprepackaged
-	rm -rf $(DIST_PATH)
